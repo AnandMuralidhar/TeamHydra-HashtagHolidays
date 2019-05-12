@@ -145,11 +145,7 @@ public class HomeController {
 		return "postreviews";
 	}
 
-	@GetMapping("/")
-	public String start() {
-		return "loginPage";
-	}
-
+	
 	@GetMapping("/loginPage")
 	public String loginPage() {
 		return "loginPage";
