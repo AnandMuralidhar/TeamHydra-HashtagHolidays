@@ -52,10 +52,32 @@ background-color: #4CAF50;
 a {
 text-decoration: none;
 }
+
+.submitbtn {
+    padding: 15px 2.0rem;
+  background-color: #4CAF50; 
+    box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
+    border-radius: 500px;
+     color: #fff; 
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow: hidden;
+    text-align: center;
+    float: right;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.previoustravelplans {
+margin-left: 10%;
+    padding: 2%;
+}
 </style>
 </head>
-<body id="bdy">
-<h2>Welcome ${loggedUser.getUserfirstname()}</h2>
+<body>
+<h2 style="padding: 2%; margin-left: 3%;">Welcome ${loggedUser.getUserfirstname()}</h2>
 <div class="previoustravelplans">
 <% 
  if(session.getAttribute("usertravelplans") != null)
@@ -104,9 +126,9 @@ for(Usertravelplan u : a)
 
 <div>
 <br /><br /><br />
-<center><form method="GET"  action="/lex1" style="margin-right: 500px">
-<button type="submit" class="w3-btn w3-black">Travel Chat</button> 
-</form><center>
+<form method="GET"  action="/lex1" style="margin-right: 500px">
+<button type="submit" class="submitbtn">Travel Chat</button> 
+</form>
 
 </div>
  </body>

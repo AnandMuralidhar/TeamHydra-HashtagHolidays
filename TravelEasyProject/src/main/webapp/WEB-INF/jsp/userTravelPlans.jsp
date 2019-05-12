@@ -5,6 +5,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <style>
 #bdy {
     
@@ -45,6 +46,8 @@ div.desc {
 
 
 </style>
+
+
 </head>
 <body id="bdy">
 
@@ -65,6 +68,7 @@ div.desc {
   <div class="desc">${item.plan}</div>
   <div class="desc"><a href="/getTravelPlanByName?planName=${item.plan}">View</a>                 
   <a href="/downloadTravelPlanItinerary?itinerary=${item.itineraryimageurl}&companyname=${item.companyusername}&plan=${item.plan}">Download</a></div>
+ 
   </div>
 
    </c:forEach>
