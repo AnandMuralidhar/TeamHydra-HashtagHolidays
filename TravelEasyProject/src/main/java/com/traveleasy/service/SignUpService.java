@@ -36,5 +36,17 @@ public class SignUpService {
 		}
 		return null;
 	}
+	
+	
+	/* Added by Chaitrali*/
+	public User getUserByEmail(String email) {
 
+		User user = signUpRepository.findUserByEmail(email);
+
+		if(user != null) {
+			return user;
+		}
+		return null;
+	}
+	
 }

@@ -57,6 +57,21 @@ public class CompanyService {
 		}
 		return null;
 	}
+	
+	
+	/*Edited by Chaitrali*/
+	public Company getCompanyByEmail(String email) {
+
+		Company company = companyRepository.findCompany(email);
+
+		if (company != null) {
+
+			return company;
+		}
+		return null;
+	}
+	
+	
 
 	public ArrayList<Travelplan> retrieveCompanyTravelplans(String companyusername) {
 

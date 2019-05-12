@@ -13,6 +13,9 @@ public interface SignUpRepository extends JpaRepository<User,Integer> {
 	
 	@Query("SELECT u FROM User u WHERE LOWER(u.username) = LOWER(:username)")
     public User findUser(@Param("username") String username);
+	
+	@Query("SELECT u FROM User u WHERE LOWER(u.useremailid) = LOWER(:useremailid)")
+    public User findUserByEmail(@Param("useremailid") String useremailid);
 
 
 }

@@ -2,6 +2,7 @@ package com.traveleasy.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -65,6 +66,39 @@ public class HomeController {
 	// @Autowired
 	// ClientUtils clientUtils;
 	//
+
+	
+	
+	 
+	 @RequestMapping("/logintest") 
+	 public String logintest(){
+	 System.out.println("*******************************");
+	 return "redirect:/userHomePage";
+	 }
+	 
+	
+	
+	@RequestMapping("/")
+	public String index(Principal principal){
+		
+		String email = principal.getName();
+		System.out.println("New Method's Email: "+email);
+		User user = null;
+		user = signUpService.getUserByEmail(email);
+		Company company = null;
+		company = companyService.getCompanyByEmail(email);
+		if(user !=null)
+		{
+			return "redirect:/userHomePage";
+		}else if(company != null)
+		{
+			return "redirect:/companyPage";
+		}
+		
+		return "redirect:/errorPage";
+	}
+	
+
 	@Autowired
 	HomeController(AmazonClientService amazonClientService) {
 		this.amazonClientService = amazonClientService;
@@ -145,7 +179,6 @@ public class HomeController {
 		return "postreviews";
 	}
 
-	
 	@GetMapping("/loginPage")
 	public String loginPage() {
 		return "loginPage";
@@ -160,6 +193,14 @@ public class HomeController {
 	public String companySignup() {
 		return "companySignup";
 	}
+	
+	
+	@GetMapping("/index")
+	public String indexPage() {
+		return "index";
+	}
+	
+	
 
 	@GetMapping("/userTravelPlans")
 	public String userTravelPlans(HttpSession session, ModelMap model) {
@@ -263,10 +304,8 @@ public class HomeController {
 			// session.setAttribute("message", "success");
 			return "redirect:/loginPage";
 	}
-	
-	
-	
-	/*Edited by Chaitrali*/
+
+	/* Edited by Chaitrali */
 	@GetMapping("/customlogin")
 	public String customlogin1(@RequestParam("username") String username, @RequestParam("pwd") String pwd,
 			@RequestParam("role") String role, ModelMap model, HttpSession session) {
@@ -323,11 +362,6 @@ public class HomeController {
 			// session.setAttribute("message", "success");
 			return "redirect:/loginPage";
 	}
-	
-	
-	
-	
-	
 
 	@RequestMapping(value = "/glogin", method = RequestMethod.GET)
 	public String googlePage() {
@@ -518,7 +552,7 @@ public class HomeController {
 			session.setAttribute("companymessage", "deleted");
 			session.setAttribute("companyname", companyname);
 			session.setAttribute("companyusername", companyusername);
-			
+
 			ArrayList<Travelplan> tp = companyService.retrieveCompanyTravelplans(companyusername);
 			session.setAttribute("travelplan", tp);
 			return "redirect:/companyPage";

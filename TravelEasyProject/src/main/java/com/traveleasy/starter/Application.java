@@ -10,10 +10,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import com.traveleasy.service.AmazonClientService;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
+
 
 @SpringBootApplication
 @EnableOAuth2Sso
@@ -37,10 +36,9 @@ public class Application extends SpringBootServletInitializer {
 		return application.sources(Application.class);
 	}
 	
-	@GetMapping("/")
-	public String start() {
-		return "login";
-	}
+	/*
+	 * @GetMapping("/") public String start() { return "login"; }
+	 */
 
 }
 
