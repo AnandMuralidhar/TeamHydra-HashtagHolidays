@@ -79,7 +79,7 @@ public class HomeController {
 	
 	
 	@RequestMapping("/")
-	public String index(Principal principal){
+	public String index(HttpSession session, Principal principal){
 		
 		String email = principal.getName();
 		System.out.println("New Method's Email: "+email);
@@ -89,9 +89,29 @@ public class HomeController {
 		company = companyService.getCompanyByEmail(email);
 		if(user !=null)
 		{
+			ArrayList<Usertravelplan> usertravelplans = userService.retrieveUsertravelplans(user.getUsername());
+			System.out.println(usertravelplans);
+			if (usertravelplans.isEmpty()) {
+				System.out.println("null");
+				session.setAttribute("usertravelplans", null);
+				session.setAttribute("loggedUser", user);
+				session.setAttribute("DynamoUser", user.getUsername());
+				session.setAttribute("message", "success");
+				return "redirect:/userHomePage";
+			}
+
+			System.out.println("not null");
+			session.setAttribute("usertravelplans", usertravelplans);
+			session.setAttribute("loggedUser", user);
+			session.setAttribute("DynamoUser", user.getUsername());
+			session.setAttribute("message", "success");
 			return "redirect:/userHomePage";
 		}else if(company != null)
 		{
+			session.setAttribute("loggedCompany", company);
+			session.setAttribute("companyusername", company.getCompUsername());
+			session.setAttribute("companyname", company.getCompName());
+			session.setAttribute("message", "success");
 			return "redirect:/companyPage";
 		}
 		
@@ -502,7 +522,7 @@ public class HomeController {
 		return "redirect:/postreviews";
 	}
 
-	@PostMapping("/traveldata")
+	@RequestMapping(value = "/traveldata", method=RequestMethod.POST, consumes = {"multipart/form-data"})
 	public String travelData(@RequestPart(value = "itinerary") MultipartFile itinerary,
 			@RequestPart(value = "planimage") MultipartFile planimage, @RequestParam("companyname") String companyname,
 			@RequestParam("companyusername") String companyusername, @RequestParam("country") String country,
@@ -544,7 +564,7 @@ public class HomeController {
 	}
 
 	/* Edited by Prathyusha on 5th */
-	@PostMapping("/travelplandelete")
+	@GetMapping("/travelplandelete")
 	public String deleteCompanyTravelplan(@RequestParam(value = "companyname") String companyname,
 			@RequestParam("companyusername") String companyusername, @RequestParam("travelplanid") Integer travelplanid,
 			HttpSession session) {
@@ -590,7 +610,7 @@ public class HomeController {
 	}
 
 	/* Edited by Prathyusha */
-	@RequestMapping(value = "/prediction")
+	@RequestMapping("/prediction")
 	public String getPredication(@RequestParam("country") String country, @RequestParam("month") String month,
 			@RequestParam("budget") String budget, HttpSession session) {
 		String budget1 = '$' + budget;
@@ -653,10 +673,11 @@ public class HomeController {
 		return "redirect:/endPage";
 	}
 
-	/* Edited by Prathyusha on 5th */
-	@PostMapping("/companytravelplans")
+	
+	@GetMapping("/companytravelplans")
 	public String companyTravelplans(@RequestParam(value = "companyname") String companyname,
-			@RequestParam("companyusername") String companyusername, HttpSession session) {
+			@RequestParam("companyusername") String companyusername,HttpSession session) {
+		System.out.println("In company travel plans");
 		ArrayList<Travelplan> tp = companyService.retrieveCompanyTravelplans(companyusername);
 		if (tp.isEmpty()) {
 			System.out.println(companyusername);
