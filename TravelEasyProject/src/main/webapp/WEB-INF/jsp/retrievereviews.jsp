@@ -13,7 +13,7 @@
 System.out.println(q);
    try {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://travelapp1.c7m1brswcf1h.us-east-1.rds.amazonaws.com:3306/travelapp", "travelapp1", "root1234");
+        Connection con = DriverManager.getConnection("jdbc:mysql://cloudproject.c7m1brswcf1h.us-east-1.rds.amazonaws.com:3306/cloudproject", "cloudproject", "teamhydra282!");
         Statement smt = con.createStatement(); //Create Statement to interact
         ResultSet r = smt.executeQuery("select * from reviews where(plan='" + q + "');");
         int count = 0;
