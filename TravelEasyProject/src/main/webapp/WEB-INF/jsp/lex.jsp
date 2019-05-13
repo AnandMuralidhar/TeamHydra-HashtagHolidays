@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Amazon Lex for JavaScript - Sample Application (BookTrip)</title>
+<title>Lex (BookTrip)</title>
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
 <style language="text/css">
 input#wisdom {
 	padding: 4px;
@@ -15,9 +15,22 @@ input::placeholder {
 	color: #ccc;
 	font-style: italic;
 }
+body{
+	background-color: #6ec6ff;
+}
+button{
+font-family: monospace;
+color: white;
+text-align: center;
+background: #0069c0;
+margin-left: 700px;
+}
 
-
-
+h1{
+font-family: monospace;
+color: white;
+text-align: center;
+}
 
 p.userRequest {
 	margin: 4px;
@@ -26,7 +39,7 @@ p.userRequest {
 	min-width: 50%;
 	max-width: 85%;
 	float: left;
-	background-color: #e7b6a3;
+	background-color: #11aec3;
 }
 
 p.lexResponse {
@@ -37,7 +50,7 @@ p.lexResponse {
 	min-width: 50%;
 	max-width: 85%;
 	float: right;
-	background-color: #a1c4df;
+	background-color: #c7db57;
 	font-style: italic;
 }
 
@@ -55,18 +68,16 @@ p.lexError {
 </head>
 
 <body>
-	<h1 style="margin-left: 550px">Amazon Lex - BookTrip</h1>
-	<p style="width: 400px; margin-left: 550px" >
-	<h2 style="margin-left: 550px">Welcome to TravelEasy!</h2>
+	<h1><STRONG>Welcome to Hashtag Holiday!</STRONG></h1>
 	</p>
 	<div  id="conversation"
-		style="width: 400px; margin-left: 550px; height: 400px; border: 1px solid #ccc; background-color: #beefa4; padding: 4px; overflow: scroll"></div>
+		style="width: 400px; margin-left: 550px; height: 400px; border: 1px solid #ccc; background-color: #81d4fa; padding: 4px; overflow: scroll"></div>
 	<form id="chatform" align="center" style="margin-top: 10px"
 		onsubmit="return pushChat();">
 		<input type="text" id="wisdom" size="80" value=""
 			placeholder="I need to see travel plans">
 	</form><br/><br/>
-	<button style="margin-left: 650px; background-color: #beefa4">Submit</button>
+	<button class="w3-btn w3-blue"><h4><strong>SUBMIT</strong></h4>
 	<script type="text/javascript">
 		// set the focus to the input box
 		document.getElementById("wisdom").focus();
@@ -83,7 +94,6 @@ p.lexError {
 		var sessionAttributes = {};
 
 		function pushChat() {
-
 			// if there is text to be sent...
 			var wisdomText = document.getElementById('wisdom');
 			if (wisdomText && wisdomText.value && wisdomText.value.trim().length > 0) {
@@ -124,7 +134,6 @@ p.lexError {
 		}
 
 		function showRequest(daText) {
-
 			var conversationDiv = document.getElementById('conversation');
 			var requestPara = document.createElement("P");
 			requestPara.className = 'userRequest';
@@ -134,7 +143,6 @@ p.lexError {
 		}
 
 		function showError(daText) {
-
 			var conversationDiv = document.getElementById('conversation');
 			var errorPara = document.createElement("P");
 			errorPara.className = 'lexError';
@@ -144,7 +152,6 @@ p.lexError {
 		}
 
 		function showResponse(lexResponse) {
-
 			var conversationDiv = document.getElementById('conversation');
 			var responsePara = document.createElement("P");
 			responsePara.className = 'lexResponse';
@@ -169,5 +176,4 @@ p.lexError {
 		}
 	</script>
 </body>
-
 </html>

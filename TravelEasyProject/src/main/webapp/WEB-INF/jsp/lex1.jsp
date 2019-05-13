@@ -1,57 +1,44 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Amazon Lex for JavaScript - Sample Application (BookTrip)</title>
-
-
+<title>Lex</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>
-
-
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <style language="text/css">
 input#wisdom {
 	padding: 4px;
 	font-size: 1em;
 	width: 400px
 }
-
-#bdy {
-    /* The image used */
-    /*background-image: url("https://images.unsplash.com/uploads/141202616623001715bb7/c1b3b9b0?ixlib=rb-0.3.5&s=0ec689e4a4a33110315bd7846be5bb3e&auto=format&fit=crop&w=1094&q=80");*/
-    
-	
-    /* Full height */
-    height: 100%; 
-
-	background-color: white;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+button,.submit{
+font-family: monospace;
+color: white;
+text-align: center;
+background: #0069c0;
+margin-left: 500px;
 }
-
+body{
+    height: 100%; 
+	background-color: #6ec6ff;
+    font-family: monospace;
+}
+h1,h4{
+font-family: monospace;
+color: white;
+text-align: center;
+}
 input::placeholder {
-	color: #ccc;
+	color: #81d4fa;
 	font-style: italic;
 }
-
 p.userRequest {
 	margin: 4px;
 	padding: 4px 10px 4px 10px;
@@ -61,7 +48,6 @@ p.userRequest {
 	float: left;
 	background-color: #11aec3;
 }
-
 p.lexResponse {
 	margin: 4px;
 	padding: 4px 10px 4px 10px;
@@ -87,18 +73,18 @@ p.lexError {
 </style>
 </head>
 
-<body id ="bdy">
+<body>
 
 	<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
 	<form method="GET" action="/logout" >
 	<p align="right">
-    <input type="submit" class="w3-btn w3-black" value="Logout"></p>
+    <input type="submit" class="w3-btn w3-blue" value="Logout"></p>
 	</form>
 	</div>
 
 
 	<p style="width: 400px; margin-left: 550px">
-	<h1 style="margin-left: 550px">Welcome to TravelEasy!</h1>
+	<h1><STRONG>Welcome to Hashtag Holiday!</STRONG></h1>
 	</p>
 	<div id="conversation"
 		style="width: 400px; margin-left: 550px; height: 400px; border: 1px solid #ccc; background-color: #a9d3d7; padding: 4px; overflow: scroll"></div>
@@ -121,8 +107,8 @@ p.lexError {
 		<!-- <button type="button" id="getReq" style="margin-left: 500px"
 			class="btn btn-success">Submit</button> -->
 	
-	<a href="/getData"><h4><strong><font-color="black" style="margin-left: 500px">Submit</font></strong></h4></a>
-
+<button class="w3-btn w3-blue"><a href="/getData"><h4><strong>SUBMIT</strong></h4></a> </button>
+<!-- <a href="/getData"><h4><strong><font-color="black" style="margin-left: 500px">Submit</font></strong></h4></a> -->
 	</div>
 
 	<!--  <div id="result">Result</div> -->
@@ -241,13 +227,6 @@ p.lexError {
 			conversationDiv.appendChild(responsePara);
 			conversationDiv.scrollTop = conversationDiv.scrollHeight;
 		}
-
-
-
- 
-
-
-
 	</script>
 </body>
 
