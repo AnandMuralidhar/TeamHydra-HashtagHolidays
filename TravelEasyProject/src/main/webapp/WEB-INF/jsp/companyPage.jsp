@@ -16,7 +16,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 #bdy {
-	background-color: #6ec6ff;
+	 background-color: #f7f7f7; 
     height: 100%; 
 	}
 table {
@@ -24,23 +24,27 @@ table {
 }
 button{
 font-family: monospace;
-background-color:#0069c0;
+/* background-color:#0069c0; */
 text-align: center;
 text-emphasis-style: bold;
 }
 h2{
 font-family: monospace;
-color: white;
-text-align: center;
+/* color: white; */
+margin-left: 3%;
+}
+h4 {
+margin-left: 5%;
 }
 .dashboardtable{
-width: 100% !important;	
+width: 95% !important;	
+    margin: 4%;
 }
 .dthead {
 	text-align: left;
 }
 .dtr {
-	background: #2196f3;
+	/* background: #2196f3; */
 }
 .tripdata {
 display: block;
@@ -98,26 +102,50 @@ div.desc {
     padding: 15px;
     text-align: center;
 }
-a{
+/* a{
 color: #FFFFFF;
 text-decoration:none;
 }
 a:hover {
 color: #FFFFFF;
 text-decoration:none;
+} */
+.bottomcontent {
+	background-color: #FFFFFF;
+	height: 100%;
+}
+.bottombuttons {
+margin:0 auto;
+width: 25%;
+}
+
+.submitbtn {
+    padding: 15px 2.0rem;
+  background-color: #4CAF50; 
+    box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
+    border-radius: 500px;
+     color: #fff; 
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow: hidden;
+    text-align: center;
 }
 </style>	
 </head>
 	<body id="bdy">
+	<div class="header" >
 	<h2><strong> Welcome ${companyname}</strong> </h2>
-<div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
-	 <form method="GET" action="/logout" >
-	<p align="right">
-    <input type="submit" class="w3-btn w3-red" value="Logout"></p>
+<div class="w3-container" style="margin-right: 50px;">
+  	<h4 style="float: left; width: 40%;"> ${companymessage}</h4>	
+	 <form style="float: right; width: 50%; padding-left: 40%;" method="GET" action="/logout" >
+	  <input type="submit" class="submitbtn w3-btn w3-blue" value="Logout">
 	</form>
-	
+
 	</div>
-	<h3> ${companymessage}</h3>
+
+	</div>
+	<div class="bottomcontent">
 	<div class="company-container">
 	
 		<form method="GET" class="form-horizontal" action="/traveldata">
@@ -159,19 +187,22 @@ text-decoration:none;
 				<div class="tripdata">
 				 <input type="text" name="budget" placeholder="Enter budget" onkeypress="return isNumberKey(event)" required><br />
 				</div>
-				<button type="submit" class="w3-btn w3-blue">Submit</button>
+				<button type="submit" class="submitbtn w3-btn w3-blue">Submit</button>
 		</form>		
 	</div>
+	<div class="bottombuttons">
 	<div class="prediction">
-	<button type="submit" class="w3-btn w3-green"><a target="_blank" href="prediction">Predict</a></button>
+	<button type="submit" class="submitbtn w3-btn w3-blue"><a style="color: white;"target="_blank" href="prediction">Predict</a></button>
 	</div>
 	<div class="companytravelplans">
 			 <form method="GET" action="/companytravelplans">
 
 		<input type="hidden" name="companyname" value="${companyname}">
 		<input type="hidden" name="companyusername" value="${companyusername}">
-		<button type="submit" class="w3-btn w3-blue" >See your plans</button>
+		<button type="submit" class="submitbtn w3-btn w3-blue" >See your plans</button>
 		</form>
+		</div>
+		</div>
 	 <% 
  if(session.getAttribute("travelplan") != null)
  {
@@ -224,6 +255,7 @@ text-decoration:none;
   
   
   <div id="displayreviews"></div>
+  </div>
 	</body>
 	<script>
 	function isNumberKey(evt){

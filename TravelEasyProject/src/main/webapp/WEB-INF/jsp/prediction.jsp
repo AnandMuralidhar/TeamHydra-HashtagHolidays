@@ -9,7 +9,7 @@ String positive = (String)session.getAttribute("positive"); %>
 <style>
 #bdy {
 	font-family: monospace;
-	background-color: #6ec6ff;
+	background-color: #f7f7f7; 
     height: 100%; 
 	}
 .predict-container {
@@ -32,11 +32,29 @@ display: block;
 margin-left: 38%;
 }
 .main-container {
-width: 90%;
+background-color: #FFFFFF;
+	height: 100%;
+	font-size: 20px;
 }
 .chart {
 width: 50%;
 height: 30%;
+}
+.submitbtn {
+    padding: 15px 2.0rem !important;
+  background-color: #4CAF50; 
+    box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
+    border-radius: 500px;
+     color: #fff; 
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow: hidden;
+    text-align: center;
+}
+a:active {
+text-decoration: none;
+color: #FFFFFF;
 }
 
 
@@ -78,7 +96,7 @@ window.onload = function () {
 			<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
 			<form method="GET" action="/logout" >
 			<p align="right">
-    		<input type="submit" class="w3-btn w3-blue" value="Logout"></p>
+    		<input type="submit" class=" submitbtn w3-btn w3-blue" value="Logout"></p>
 			</form>
 			</div>
 <center>
@@ -113,7 +131,7 @@ window.onload = function () {
 				<br />
 				
 				</div>
-				<button type="submit" class="w3-btn w3-blue" >Predict</button>
+				<button type="submit" class="submitbtn w3-btn w3-blue" >Predict</button>
 					
 	</form>
 	</div>
