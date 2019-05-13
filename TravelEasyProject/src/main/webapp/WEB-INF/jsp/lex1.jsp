@@ -75,26 +75,25 @@ p.lexError {
 
 <body>
 
-	<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
+		<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
 	<form method="POST" action="/logout" >
 	<p align="right">
-    <input type="submit" class="w3-btn w3-blue"" value="Logout"></p>
+    <input type="submit" class="w3-btn w3-blue" value="Logout"></p>
 	</form>
 	</div>
 
 
 	<p style="width: 400px; margin-left: 550px">
-	<h1>Welcome to Hashtag Holiday!</h1>
+	<h1><STRONG>Welcome to Hashtag Holiday!</STRONG></h1>
 	</p>
 	<div id="conversation"
-		style="width: 400px; margin-left: 550px; height: 400px; border: 1px solid #ccc; background-color: #81d4fa; padding: 4px; overflow: scroll"></div>
+		style="width: 400px; margin-left: 550px; height: 400px; border: 1px solid #ccc; background-color: #a9d3d7; padding: 4px; overflow: scroll"></div>
 	<form id="chatform" align="center" style="margin-top: 10px"
 		onsubmit="return pushChat();">
 		<input type="text" id="wisdom" style="margin-right: 10px" value=""
-			 placeholder="I need to see travel plans"> 
-			 <input
+			 placeholder="I need to see travel plans"> <input
 			type="hidden" id="userID"
-			value="<%=session.getAttribute("DynamoUser") %>
+			value="<%=session.getAttribute("DynamoUser") %>">
 
 	</form>
 	<br />
@@ -108,8 +107,8 @@ p.lexError {
 		<!-- <button type="button" id="getReq" style="margin-left: 500px"
 			class="btn btn-success">Submit</button> -->
 	
-	<button class="w3-btn w3-blue"><a href="/getData"><h4><strong>SUBMIT</strong></h4></a>
-	</button>
+<button class="w3-btn w3-blue"><a href="/getData"><h4><strong>SUBMIT</strong></h4></a> </button>
+<!-- <a href="/getData"><h4><strong><font-color="black" style="margin-left: 500px">Submit</font></strong></h4></a> -->
 	</div>
 
 	<!--  <div id="result">Result</div> -->
