@@ -522,7 +522,7 @@ public class HomeController {
 		return "redirect:/postreviews";
 	}
 
-	@RequestMapping(value = "/traveldata", method=RequestMethod.POST, consumes = {"multipart/form-data"})
+	@RequestMapping(value = "/traveldata", method=RequestMethod.POST, consumes = {"multipart/form-data"} )
 	public String travelData(@RequestPart(value = "itinerary") MultipartFile itinerary,
 			@RequestPart(value = "planimage") MultipartFile planimage, @RequestParam("companyname") String companyname,
 			@RequestParam("companyusername") String companyusername, @RequestParam("country") String country,
@@ -610,7 +610,7 @@ public class HomeController {
 	}
 
 	/* Edited by Prathyusha */
-	@RequestMapping("/prediction")
+	@RequestMapping("/predictions")
 	public String getPredication(@RequestParam("country") String country, @RequestParam("month") String month,
 			@RequestParam("budget") String budget, HttpSession session) {
 		String budget1 = '$' + budget;
