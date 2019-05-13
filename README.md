@@ -17,7 +17,12 @@ Students:
 
 [Saylee Vyawahare](https://www.linkedin.com/in/saylee-vyawahare-51b59188/)
 
-### Pre-requisite Set Up
+### Diagrams
+Architecture
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/ArchitectureDiagram.png)
+
+Code Pipeline
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/CICD.jpg)
 
 #### AWS Resources:
 
