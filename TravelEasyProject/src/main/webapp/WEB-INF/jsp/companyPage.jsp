@@ -275,7 +275,7 @@ width: 25%;
 	     });
 	 } 
 	
-	 var message = $("h3").text();
+	 var message = $("h4").text();
 		console.log("message: "+message);
 		 var audio = new Audio('audio?msg=' + message);
 	     audio.play(); 

@@ -572,8 +572,8 @@ public class HomeController {
 		System.out.println("Company Name: " + companyname);
 		System.out.println("Comapny Username: " + companyusername);
 
-			String itineraryimgurl = "https://s3.amazonaws.com/travelapp-cloud/travelplans/prathyusha.kasibhatta%40gmail.com/Itinerary.pdf";
-			String planimgurl = "https://s3.amazonaws.com/travelapp-cloud/travelplans/prathyusha.kasibhatta%40gmail.com/image.jpeg";
+			String itineraryimgurl = "https://s3.amazonaws.com/travelapp-cloud/travelplans/prathyusha.kasibhatta%40gmail.com/FancyChina/FancyChina.txt";
+			String planimgurl = "https://s3.amazonaws.com/travelapp-cloud/travelplans/prathyusha.kasibhatta%40gmail.com/FancyChina/FancyChina.jpg";
 			Travelplan tp = new Travelplan();
 			tp.setCompanyusername(companyusername);
 			tp.setCountry(country);

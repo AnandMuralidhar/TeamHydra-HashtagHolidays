@@ -70,7 +70,7 @@ background-color: #FFFFFF;
   <p align="right">
     <input type="submit" class="submitbtn w3-btn w3-blue" value="Logout"></p>
   </form>
-	<button type="submit" class="submitbtn w3-btn w3-blue"><a style="color: white;"target="_blank" href="userHomePage">Home</a></button>
+	<button type="submit" class="submitbtn w3-btn w3-blue"><a style="color: white;" href="userHomePage">Home</a></button>
 
 	</div>
 

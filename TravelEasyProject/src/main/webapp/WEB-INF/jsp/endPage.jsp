@@ -9,11 +9,11 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 body {
-    background: #6ec6ff;
+    background: #FFFFFF;
 }
 h2,h1, h3{
 font-family: monospace;
-color: white;
+/* color: white; */
 text-align: center;
 font-size: 38px;
 }
@@ -28,6 +28,8 @@ margin-left: 500px;
 
 <body>
 <h1><strong>Thanks for visiting</strong></h1>
-<button class="w3-btn w3-blue"><a href="/"><h2><strong>Back to Hashtag Holiday?</strong></h2></a></button>
+
+<a href="/"><h2><strong>Back to Hashtag Holiday?</strong></h2></a>
+
 </body>
 </html>

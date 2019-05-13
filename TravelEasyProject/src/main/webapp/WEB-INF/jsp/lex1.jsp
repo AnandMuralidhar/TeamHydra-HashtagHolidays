@@ -86,6 +86,10 @@ p.lexError {
 .bottomcontent {
 background-color: #FFFFFF;
 }
+a:hover {
+color: white;
+text-decoration: none;
+}
 </style>
 </head>
 
@@ -124,7 +128,7 @@ background-color: #FFFFFF;
 		<!-- <button type="button" id="getReq" style="margin-left: 500px"
 			class="btn btn-success">Submit</button> -->
 	
-<button class="submitbtn w3-btn w3-blue"><a href="/getData"><h4><strong>SUBMIT</strong></h4></a> </button>
+<button class="submitbtn w3-btn w3-blue"><a href="/getData"><h4>SUBMIT</h4></a> </button>
 <!-- <a href="/getData"><h4><strong><font-color="black" style="margin-left: 500px">Submit</font></strong></h4></a> -->
 	</div>
 
