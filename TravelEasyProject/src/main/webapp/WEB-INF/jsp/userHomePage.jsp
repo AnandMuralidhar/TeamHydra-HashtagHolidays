@@ -22,12 +22,10 @@
 
 h2{
 font-family: monospace;
-color: white;
-text-align: center;
 }
 #bdy {
 	font-family: monospace;
-	background-color: #6ec6ff;
+	background-color: #f7f7f7; 
     height: 100%; 
 	}
 
@@ -43,7 +41,7 @@ width: 100% !important;
 	text-align: left;
 }
 .dtr {
-	background-color: #dccdcc;
+	/* background-color: #dccdcc; */
 }
 
 .lex {
@@ -59,8 +57,8 @@ background-color: #4CAF50;
 }
 h2,h1, h3{
 font-family: monospace;
-color: white;
-text-align: center;
+/* color: white;
+text-align: center; */
 font-size: 38px;
 }
 a {
@@ -68,28 +66,37 @@ text-decoration: none;
 }
 
 .submitbtn {
-   font-family: monospace;
-color: white;
-text-align: center;
-background-color: #0069c0;
-margin-left: 500px;
-  overflow: hidden;
+    padding: 15px 2.0rem !important;
+  background-color: #4CAF50; 
+    box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
+    border-radius: 500px;
+     color: #fff; 
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow: hidden;
     text-align: center;
-    float: right;
 }
 html, body {
   height: 100%;
   margin: 0;
-	background-color: #6ec6ff;
+  background-color: #f7f7f7; 
+	/* background-color: #6ec6ff; */
 }
 .previoustravelplans {
 margin-left: 10%;
     padding: 2%;
 }
+
+.bottomcontent {
+height: 100%;
+background-color: #FFFFFF;
+}
 </style>
 </head>
 <body>
-<h2 style="padding: 2%; margin-left: 3%;"><strong>Welcome ${loggedUser.getUserfirstname()}</strong></h2>
+<h2 style=" margin-left: 3%;"><strong>Welcome ${loggedUser.getUserfirstname()}</strong></h2>
+<div class="bottomcontent">
 <div class="previoustravelplans">
 <% 
  if(session.getAttribute("usertravelplans") != null)
@@ -116,7 +123,7 @@ for(Usertravelplan u : a)
 	<td><%out.println(u.getPlan()); %></td>
 	<td><%out.println(u.getCountry()); %></td>
 	<td><%out.println(u.getMonth()); %></td>
-	<td><%out.println(u.getBudget()); %></td>
+	<td>$<%out.println(u.getBudget()); %></td>
 <!--  
 <td><button><a href="postreviews?username=<%=u.getuserName()%>&plan=<%=u.getPlan()%>">Post reviews</a></button></td>-->
 </tr>
@@ -131,7 +138,7 @@ for(Usertravelplan u : a)
  else
  { %>
 	 <div class="noplans">
-	<%  out.println("not travelled yet"); %>
+	<h4><%  out.println("not travelled yet"); %></h4>
 	 </div>
  <%   } %>
   
@@ -139,10 +146,11 @@ for(Usertravelplan u : a)
 
 <div>
 <br /><br /><br />
-<form method="GET"  action="/lex1" style="margin-right: 500px">
-<button type="submit" class="w3-btn w3-blue">Travel Chat</button> 
+<form method="GET"  action="/lex1" style="margin-right: 100px; float: right;">
+<button type="submit" class="submitbtn w3-btn w3-blue">Travel Chat</button> 
 </form>
 
+</div>
 </div>
  </body>
  <style>

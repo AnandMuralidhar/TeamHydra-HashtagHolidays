@@ -27,12 +27,13 @@ margin-left: 500px;
 }
 body{
     height: 100%; 
-	background-color: #6ec6ff;
+    background-color: #f7f7f7; 
+/* 	background-color: #6ec6ff; */
     font-family: monospace;
 }
 h1,h4{
 font-family: monospace;
-color: white;
+/* color: white; */
 text-align: center;
 }
 input::placeholder {
@@ -70,6 +71,21 @@ p.lexError {
 	float: right;
 	background-color: #f77;
 }
+.submitbtn {
+    padding: 15px 2.0rem !important;
+  background-color: #4CAF50; 
+    box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
+    border-radius: 500px;
+     color: #fff; 
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow: hidden;
+    text-align: center;
+}
+.bottomcontent {
+background-color: #FFFFFF;
+}
 </style>
 </head>
 
@@ -78,14 +94,15 @@ p.lexError {
 	<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
 	<form method="GET" action="/logout" >
 	<p align="right">
-    <input type="submit" class="w3-btn w3-blue" value="Logout"></p>
+    <input type="submit" class="submitbtn w3-btn w3-blue" value="Logout"></p>
 	</form>
 	</div>
-
+	<div class="bottomcontent">
 
 	<p style="width: 400px; margin-left: 550px">
 	<h1><STRONG>Welcome to Hashtag Holiday!</STRONG></h1>
 	</p>
+
 	<div id="conversation"
 		style="width: 400px; margin-left: 550px; height: 400px; border: 1px solid #ccc; background-color: #a9d3d7; padding: 4px; overflow: scroll"></div>
 	<form id="chatform" align="center" style="margin-top: 10px"
@@ -107,14 +124,14 @@ p.lexError {
 		<!-- <button type="button" id="getReq" style="margin-left: 500px"
 			class="btn btn-success">Submit</button> -->
 	
-<button class="w3-btn w3-blue"><a href="/getData"><h4><strong>SUBMIT</strong></h4></a> </button>
+<button class="submitbtn w3-btn w3-blue"><a href="/getData"><h4><strong>SUBMIT</strong></h4></a> </button>
 <!-- <a href="/getData"><h4><strong><font-color="black" style="margin-left: 500px">Submit</font></strong></h4></a> -->
 	</div>
 
 	<!--  <div id="result">Result</div> -->
 
 
-
+</div>
 
 	<script type="text/javascript">
 		// set the focus to the input box

@@ -9,7 +9,7 @@
 <style>
 #bdy {
     
-	background-color: white;
+	background-color: #f7f7f7; 
     height: 100%; 
 	
     /* Full height */
@@ -42,8 +42,21 @@ div.desc {
     padding: 15px;
     text-align: center;
 }
-
-
+.submitbtn {
+    padding: 15px 2.0rem;
+  background-color: #4CAF50; 
+    box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
+    border-radius: 500px;
+     color: #fff; 
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2;
+    overflow: hidden;
+    text-align: center;
+}
+.bottomcontent {
+background-color: #FFFFFF;
+}
 
 </style>
 
@@ -51,14 +64,17 @@ div.desc {
 </head>
 <body id="bdy">
 
-<div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
-	<form method="GET" action="/logout" >
-	<p align="right">
-    <input type="submit" class="w3-btn w3-black" value="Logout"></p>
-	</form>
+
+	<div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
+  <form method="GET" action="/logout" style="float: right; padding-left: 1%;" >
+  <p align="right">
+    <input type="submit" class="submitbtn w3-btn w3-blue" value="Logout"></p>
+  </form>
+	<button type="submit" class="submitbtn w3-btn w3-blue"><a style="color: white;"target="_blank" href="userHomePage">Home</a></button>
+
 	</div>
 
-
+<div class="bottomcontent">
   <c:forEach items="${Travelplans}" var="item">
 	<div class="gallery">
   <a target="_blank" href="${item.planimageurl}">
@@ -72,6 +88,6 @@ div.desc {
   </div>
 
    </c:forEach>
-
+</div>
 </body>
 </html>
