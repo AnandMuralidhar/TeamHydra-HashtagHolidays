@@ -20,11 +20,12 @@ System.out.println(data);
 </script>
 <style>
 #bdy {
-	background-color: white;
+	background-color:#6ec6ff;
     height: 100%; 
 	}
 body {
-  font-family: Times New Roman, Times, serif;
+  font-family: monospace, serif;
+  color: #fff;
 }
 
 * {
@@ -42,7 +43,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #0069c0;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -50,13 +51,13 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #2196f3;
 }
 
 /* Style the container/contact section */
 .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #2196f3;
     padding: 10px;
     height: 70%;
 }
@@ -151,7 +152,7 @@ display: inline-block;
 }
 
 .footercontainer {
-background-color: #f2f2f2; 
+background-color: #005cb2; 
 height: 100%;
 }
 </style>
