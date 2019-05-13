@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>userSignup</title>
+<title>Hashtag Holiday</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -13,7 +13,6 @@
 </head>
 <style>
 #bdy {
-
     height: 100%; 
 	}
 	input[type=text], input[type=password] {
@@ -26,12 +25,10 @@
   border-bottom: 1px solid black;
   padding: 0.5%;
 }
-	
-	<!-- Modified styles-->
-	.card {
-/* 	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
- border-right: 1px solid rgba(0, 0, 0, 0.2);
-	 height: 100%;
+<!-- Modified styles-->
+.card {
+ 	border-right: 1px solid rgba(0, 0, 0, 0.2);
+	height: 100%;
 }
 .container {
 	height: 100%;
@@ -42,7 +39,6 @@
 	width: 100%;
 	position: relative;
 	padding: 4%;
-	
 }
 .headerelement {
 	float: left;
@@ -64,8 +60,7 @@ text-decoration: none;
 	float: left;
 	width:60%;
 	    height: 100%;
-	background-color: #f7f7f7;
-	
+	background-color: #f7f7f7;	
 }
 .headercontent {
 	clear: both;
@@ -97,8 +92,6 @@ html, body {
     float: left;
     margin-right: 5%;
     }
-
-	
 </style>
 <body>
 <div class="container">
@@ -109,7 +102,7 @@ html, body {
 <div class="headerelement"><a href="/companySignup">Company Sign up</a></div>
 </div>
 <div class="headercontent">
-<h2>Live life with no excuses, travel with no regret <br />  -Oscar Wilde.</h2>
+<h2>Live life with no excuses, travel with no regret <br />  - Oscar Wilde.</h2>
 </div>
 </div>
 <div class="rightcontent card">
@@ -118,11 +111,7 @@ html, body {
 
 <div class="User Signup page">
 <h1><b>Welcome New User</b></h1></br></br>
-
-
 </br>
-<!--  
-<input type="submit" value="Submit"> -->
 <div style="margin-left: 33%;">
 <input type="submit"  class="submitbtn" name="Register" value="Register">
 <p class="submitbtn" style="width: 18%;"><a style="color: #FFFFFF;" href="/logintest">Cancel</a></p>

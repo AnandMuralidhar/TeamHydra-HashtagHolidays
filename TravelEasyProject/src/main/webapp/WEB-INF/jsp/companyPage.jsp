@@ -16,13 +16,23 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 #bdy {
-	background-color: white;
+	background-color: #6ec6ff;
     height: 100%; 
 	}
 table {
 	width: 100% !important;	
 }
-
+button{
+font-family: monospace;
+background-color:#0069c0;
+text-align: center;
+text-emphasis-style: bold;
+}
+h2{
+font-family: monospace;
+color: white;
+text-align: center;
+}
 .dashboardtable{
 width: 100% !important;	
 }
@@ -30,14 +40,17 @@ width: 100% !important;
 	text-align: left;
 }
 .dtr {
-	background-color: #dccdc;
+	background: #2196f3;
 }
 .tripdata {
 display: block;
 margin-left: 38%;
 }
-input[type=text], select {
+input[type=text] {
     display: block;
+}
+select{
+	display: block;
 }
 .company-container {
     margin: auto;
@@ -89,7 +102,7 @@ div.desc {
 </style>	
 </head>
 	<body id="bdy">
-	<h2>Welcome ${companyname} </h2>
+	<h2>  Welcome ${companyname}</h2>
 <div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
 	<form method="POST" action="/logout" >
 	<p align="right">
@@ -98,9 +111,7 @@ div.desc {
 	</div>
 	<h3> ${companymessage}</h3>
 	<div class="company-container">
-	
-		<form method="POST" class="form-horizontal" action="/traveldata"  enctype="multipart/form-data">
-			
+		<form method="POST" class="form-horizontal" action="/traveldata"  enctype="multipart/form-data">			
 	<input type="hidden" name="companyname" value="${companyname}">
 	<input type="hidden" name="companyusername" value="${companyusername}">
 				<label for="file">Upload Itinerary:</label>
@@ -112,7 +123,7 @@ div.desc {
 				</div>
 				<label for="country">Country:</label>
 				<div class="tripdata">
-               <input type="text" name="country" placeholder="enter destination" required><br />
+               <input type="text" name="country" placeholder="Enter destination" required><br />
 			   </div>
 			   <label>Month:</label>
 			   <div class="tripdata">
@@ -133,23 +144,23 @@ div.desc {
                  </div>
 				<label>Plan name:</label>
 				<div class="tripdata">
-				 <input type="text" name="plan" placeholder="enter unique plan name" required><br />
+				 <input type="text" name="plan" placeholder="Enter unique plan name" required><br />
 				</div>
 				<label>Budget:</label>
 				<div class="tripdata">
-				 <input type="text" name="budget" placeholder="enter budget" onkeypress="return isNumberKey(event)" required><br />
+				 <input type="text" name="budget" placeholder="Enter budget" onkeypress="return isNumberKey(event)" required><br />
 				</div>
-				<button type="submit" class="w3-btn w3-black">Submit</button>
+				<button type="submit" class="w3-btn">Submit</button>
 		</form>		
 	</div>
 	<div class="prediction">
-	<button type="submit"><a target="_blank" href="prediction" class="w3-btn w3-black">Predict</a></button>
+	<button type="submit"><a target="_blank" href="prediction" class="w3-btn">Predict</a></button>
 	</div>
 	<div class="companytravelplans">
 			<form method="POST" action="/companytravelplans">
 		<input type="hidden" name="companyname" value="${companyname}">
 		<input type="hidden" name="companyusername" value="${companyusername}">
-		<button type="submit" class="w3-btn w3-black">See your plans</button>
+		<button type="submit" class="w3-btn" >See your plans</button>
 		</form>
 	 <% 
  if(session.getAttribute("travelplan") != null)
