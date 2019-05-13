@@ -3,7 +3,6 @@
 <title>Company Dashboard</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <% String negative = (String)session.getAttribute("negative"); 
 String positive = (String)session.getAttribute("positive"); %>
 <style>
@@ -42,10 +41,10 @@ height: 30%;
 }
 .submitbtn {
     padding: 15px 2.0rem !important;
-  background-color: #4CAF50; 
+  	background-color: #4CAF50; 
     box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
     border-radius: 500px;
-     color: #fff; 
+    color: #fff; 
     font-size: 19px;
     font-weight: 400;
     line-height: 1.2;
@@ -106,7 +105,7 @@ window.onload = function () {
 	<form method="GET" class="form-horizontal" action="/predictions">
 	<label for="country">Country:</label>
 				<div class="predictdata">
-				<input type="text" class="tripdata" name="country" placeholder="enter destination" required><br />		
+				<input type="text" class="tripdata" name="country" placeholder="Enter destination" required><br />		
 			 </div>
 			   <label>Month:</label>
 			   <div class="predictdata">
@@ -127,7 +126,7 @@ window.onload = function () {
                  </div>
                  <label>Budget:</label>
                  <div class="predictdata">
-				 <input type="text" class="tripdata" name="budget" placeholder="enter budget" onkeypress="return isNumberKey(event)" required>
+				 <input type="text" class="tripdata" name="budget" placeholder="Enter budget" onkeypress="return isNumberKey(event)" required>
 				<br />
 				
 				</div>
