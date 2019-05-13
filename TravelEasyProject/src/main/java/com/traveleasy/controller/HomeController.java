@@ -522,20 +522,58 @@ public class HomeController {
 		return "redirect:/postreviews";
 	}
 
-	@RequestMapping(value = "/traveldata", method=RequestMethod.POST, consumes = {"multipart/form-data"} )
-	public String travelData(@RequestPart(value = "itinerary") MultipartFile itinerary,
-			@RequestPart(value = "planimage") MultipartFile planimage, @RequestParam("companyname") String companyname,
+//	@RequestMapping(value = "/traveldata", method=RequestMethod.POST, consumes = {"multipart/form-data"} )
+//	public String travelData(@RequestPart(value = "itinerary") MultipartFile itinerary,
+//			@RequestPart(value = "planimage") MultipartFile planimage, @RequestParam("companyname") String companyname,
+//			@RequestParam("companyusername") String companyusername, @RequestParam("country") String country,
+//			@RequestParam("month") String month, @RequestParam("plan") String plan, @RequestParam("budget") int budget,
+//			HttpSession session) {
+//
+//		System.out.println("Company Name: " + companyname);
+//		System.out.println("Comapny Username: " + companyusername);
+//		Long itenerarysize = itinerary.getSize() / 1024 / 1024;
+//		Long planimagesize = planimage.getSize() / 1024 / 1024;
+//		if ((itenerarysize <= 10) && (planimagesize <= 10)) {
+//			String itineraryimgurl = this.amazonClientService.uploadTravelFiletoS3(itinerary, companyusername, plan);
+//			String planimgurl = this.amazonClientService.uploadTravelFiletoS3(planimage, companyusername, plan);
+//			Travelplan tp = new Travelplan();
+//			tp.setCompanyusername(companyusername);
+//			tp.setCountry(country);
+//			tp.setMonth(month);
+//			tp.setPlan(plan);
+//			tp.setBudget(budget);
+//			tp.setItineraryimageurl(itineraryimgurl);
+//			tp.setPlanimageurl(planimgurl);
+//
+//			if (companyService.addTravelplan(tp)) {
+//				session.setAttribute("companyname", companyname);
+//				session.setAttribute("companyusername", companyusername);
+//				session.setAttribute("companymessage", "Travel plan uploaded successfully!!!");
+//				return "redirect:/companyPage";
+//			}
+//			session.setAttribute("companyname", companyname);
+//			session.setAttribute("companyusername", companyusername);
+//			session.setAttribute("companymessage", "Please try with unique plan name.");
+//			return "redirect:/companyPage";
+//		}
+//		session.setAttribute("companyname", companyname);
+//		session.setAttribute("companyusername", companyusername);
+//		session.setAttribute("companymessage", "Upload failed!!! Please upload images less than 10MB.");
+//		return "redirect:/companyPage";
+//
+//	}
+	
+	@GetMapping("/traveldata")
+	public String travelData(@RequestParam("companyname") String companyname,
 			@RequestParam("companyusername") String companyusername, @RequestParam("country") String country,
 			@RequestParam("month") String month, @RequestParam("plan") String plan, @RequestParam("budget") int budget,
 			HttpSession session) {
 
 		System.out.println("Company Name: " + companyname);
 		System.out.println("Comapny Username: " + companyusername);
-		Long itenerarysize = itinerary.getSize() / 1024 / 1024;
-		Long planimagesize = planimage.getSize() / 1024 / 1024;
-		if ((itenerarysize <= 10) && (planimagesize <= 10)) {
-			String itineraryimgurl = this.amazonClientService.uploadTravelFiletoS3(itinerary, companyusername, plan);
-			String planimgurl = this.amazonClientService.uploadTravelFiletoS3(planimage, companyusername, plan);
+
+			String itineraryimgurl = "https://s3.amazonaws.com/travelapp-cloud/travelplans/prathyusha.kasibhatta%40gmail.com/Itinerary.pdf";
+			String planimgurl = "https://s3.amazonaws.com/travelapp-cloud/travelplans/prathyusha.kasibhatta%40gmail.com/image.jpeg";
 			Travelplan tp = new Travelplan();
 			tp.setCompanyusername(companyusername);
 			tp.setCountry(country);
@@ -555,11 +593,11 @@ public class HomeController {
 			session.setAttribute("companyusername", companyusername);
 			session.setAttribute("companymessage", "Please try with unique plan name.");
 			return "redirect:/companyPage";
-		}
-		session.setAttribute("companyname", companyname);
-		session.setAttribute("companyusername", companyusername);
-		session.setAttribute("companymessage", "Upload failed!!! Please upload images less than 10MB.");
-		return "redirect:/companyPage";
+		
+//		session.setAttribute("companyname", companyname);
+//		session.setAttribute("companyusername", companyusername);
+//		session.setAttribute("companymessage", "Upload failed!!! Please upload images less than 10MB.");
+//		return "redirect:/companyPage";
 
 	}
 
@@ -655,7 +693,7 @@ public class HomeController {
 		return "endPage";
 	}
 
-	@RequestMapping(value = "/logout", method = RequestMethod.POST)
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(ModelMap model, HttpSession session) {
 
 		String id_token = (String) session.getAttribute("id_token");

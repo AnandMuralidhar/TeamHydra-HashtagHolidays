@@ -23,6 +23,6 @@
 </style>
 <body id="bdy">
 <h1><center><strong><font color= "Black">Thanks for visiting</strong></center></h1>
-<a href="/loginPage"><h3><center><strong><font color= "Black">To Login again Click here</font></strong></center></h3></a>
+<a href="/"><h3><center><strong><font color= "Black">To Login again Click here</font></strong></center></h3></a>
 </body>
 </html>

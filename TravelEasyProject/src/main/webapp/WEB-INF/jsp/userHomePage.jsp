@@ -92,7 +92,7 @@ margin-left: 10%;
 						<th>Country</th>
 						<th>Month</th>
 						<th>Budget</th>
-						<th>Post Review</th>
+						<!--  <th>Post Review</th> -->
 									</tr>
 					</thead>
 
@@ -105,8 +105,9 @@ for(Usertravelplan u : a)
 	<td><%out.println(u.getCountry()); %></td>
 	<td><%out.println(u.getMonth()); %></td>
 	<td><%out.println(u.getBudget()); %></td>
-
-<td><button><a href="postreviews?username=<%=u.getuserName()%>&plan=<%=u.getPlan()%>">Post reviews</a></button></td></tr>
+<!--  
+<td><button><a href="postreviews?username=<%=u.getuserName()%>&plan=<%=u.getPlan()%>">Post reviews</a></button></td>-->
+</tr>
 <% } %>										
 </tbody>
 

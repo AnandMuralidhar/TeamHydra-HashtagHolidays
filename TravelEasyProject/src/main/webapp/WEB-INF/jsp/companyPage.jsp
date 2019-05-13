@@ -85,21 +85,29 @@ div.desc {
     padding: 15px;
     text-align: center;
 }
-
+a{
+color: #FFFFFF;
+text-decoration:none;
+}
+a:hover {
+color: #FFFFFF;
+text-decoration:none;
+}
 </style>	
 </head>
 	<body id="bdy">
 	<h2>Welcome ${companyname} </h2>
 <div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
-	<form method="POST" action="/logout" >
+	 <form method="GET" action="/logout" >
 	<p align="right">
     <input type="submit" class="w3-btn w3-black" value="Logout"></p>
 	</form>
+	
 	</div>
 	<h3> ${companymessage}</h3>
 	<div class="company-container">
 	
-		<form method="POST" class="form-horizontal" action="/traveldata"  enctype="multipart/form-data">
+		<form method="GET" class="form-horizontal" action="/traveldata">
 			
 	<input type="hidden" name="companyname" value="${companyname}">
 	<input type="hidden" name="companyusername" value="${companyusername}">
@@ -143,7 +151,7 @@ div.desc {
 		</form>		
 	</div>
 	<div class="prediction">
-	<button type="submit"><a target="_blank" href="prediction" class="w3-btn w3-black">Predict</a></button>
+	<button type="submit" class="w3-btn w3-black"><a target="_blank" href="prediction">Predict</a></button>
 	</div>
 	<div class="companytravelplans">
 			 <form method="GET" action="/companytravelplans">
@@ -169,7 +177,6 @@ div.desc {
 						<th>Itinerary Image</th>
 						<th>Plan Image</th>
 						<th>Delete</th>
-						<th>View Reviews</th>
 						</tr>
 					</thead>
 <tbody class="dtr">
@@ -189,10 +196,11 @@ div.desc {
 		<input type="hidden" name="travelplanid" value="${item.travelPlanId}">
 	<button><span class="glyphicon glyphicon-trash"></span></button>
 	</form></td>
+	<!--  
 <td><input type="hidden" id="plan" value="${item.plan}">
 
 <button type="submit" id="getreviews" value="${item.plan}" class="getreviews" onClick="getreviews('${item.plan}')" >Reviews</button> </td>
-
+-->
 </tr>										
  </c:forEach>
 </tbody>
@@ -223,10 +231,12 @@ div.desc {
 		 
 	     });
 	 } 
-	var message = $("h3").text();
-	console.log("message: "+message);
-	 var audio = new Audio('audio?msg=' + message);
-     audio.play();	
+	
+	 var message = $("h3").text();
+		console.log("message: "+message);
+		 var audio = new Audio('audio?msg=' + message);
+	     audio.play(); 
+	     
 	</script>
 	
 </html>
