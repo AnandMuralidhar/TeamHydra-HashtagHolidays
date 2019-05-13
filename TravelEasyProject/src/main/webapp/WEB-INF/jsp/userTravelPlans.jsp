@@ -51,11 +51,12 @@ div.desc {
 </head>
 <body id="bdy">
 
-<div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
-	<form method="GET" action="/logout" >
+
+	<div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
+	<form method="GET" action="/logout" style="float: right; padding-left: 1%;" >
 	<p align="right">
     <input type="submit" class="w3-btn w3-black" value="Logout"></p>
-	</form>
+	<button type="submit" class="submitbtn w3-btn w3-blue"><a style="color: white;"target="_blank" href="userHomePage">Home</a></button>
 	</div>
 
 
