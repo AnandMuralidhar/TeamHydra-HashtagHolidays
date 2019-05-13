@@ -157,7 +157,8 @@ div.desc {
 	<button type="submit"><a target="_blank" href="prediction" class="w3-btn">Predict</a></button>
 	</div>
 	<div class="companytravelplans">
-			<form method="POST" action="/companytravelplans">
+			 <form method="GET" action="/companytravelplans">
+
 		<input type="hidden" name="companyname" value="${companyname}">
 		<input type="hidden" name="companyusername" value="${companyusername}">
 		<button type="submit" class="w3-btn" >See your plans</button>
@@ -192,7 +193,7 @@ div.desc {
 	<td>$${item.budget}</td>
 <td><a href="${item.itineraryimageurl}">Itinerary image</a></td>
 <td><a href="${item.planimageurl}">Itinerary image</a></td>
-	<td><form method="post" action="/travelplandelete">
+	<td><form method="GET" action="/travelplandelete">
 	<input type="hidden" name="companyname" value="${companyname}">
 		<input type="hidden" name="companyusername" value="${companyusername}">
 		<input type="hidden" name="travelplanid" value="${item.travelPlanId}">
@@ -233,9 +234,9 @@ div.desc {
 	     });
 	 } 
 	var message = $("h3").text();
+	console.log("message: "+message);
 	 var audio = new Audio('audio?msg=' + message);
-     audio.play();
-	
+     audio.play();	
 	</script>
 	
 </html>

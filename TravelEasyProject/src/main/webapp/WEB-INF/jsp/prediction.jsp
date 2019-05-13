@@ -84,7 +84,7 @@ window.onload = function () {
 <div class="main-container">
 <div class="predict-container">
 
-	<form method="POST" class="form-horizontal" action="/prediction">
+	<form method="GET" class="form-horizontal" action="/prediction">
 	<label for="country">Country:</label>
 				<div class="predictdata">
 				<input type="text" class="tripdata" name="country" placeholder="enter destination" required><br />		
