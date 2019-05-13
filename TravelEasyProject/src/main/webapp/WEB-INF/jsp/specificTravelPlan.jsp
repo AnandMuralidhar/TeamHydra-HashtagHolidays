@@ -20,12 +20,12 @@ System.out.println(data);
 </script>
 <style>
 #bdy {
-	background-color:#6ec6ff;
+	background-color: #f7f7f7; 
     height: 100%; 
 	}
 body {
   font-family: monospace, serif;
-  color: #fff;
+  /* color: #fff; */
 }
 
 * {
@@ -57,7 +57,7 @@ input[type=submit]:hover {
 /* Style the container/contact section */
 .container {
     border-radius: 5px;
-    background-color: #2196f3;
+    background-color: #FFFFFF;
     padding: 10px;
     height: 70%;
 }
@@ -107,7 +107,7 @@ width: 60%;
 margin-top: 8%;
 }
 .footer {
-    border-top: 4px solid #4CAF50; 
+    border-top: 4px solid #0069c0; 
 }
 
 .footer span {
@@ -120,7 +120,7 @@ position: absolute;
     right: 15%;
     height: 40px;
     padding: 0px;
-    background: #f2f2f2;
+    background: #ffffff;
 }
 
 .dropdown-menu {
@@ -152,7 +152,7 @@ display: inline-block;
 }
 
 .footercontainer {
-background-color: #005cb2; 
+ background-color: #FFFFFF;  
 height: 100%;
 }
 </style>
