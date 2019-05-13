@@ -27,7 +27,7 @@ text-align: center;
 }
 #bdy {
 	font-family: monospace;
-	background-color: #2196f3;
+	background-color: #6ec6ff;
     height: 100%; 
 	}
 
@@ -57,6 +57,12 @@ background-color: #4CAF50;
     width: 5%;
     opacity: 0.9;
 }
+h2,h1, h3{
+font-family: monospace;
+color: white;
+text-align: center;
+font-size: 38px;
+}
 a {
 text-decoration: none;
 }
@@ -74,7 +80,7 @@ margin-left: 500px;
 html, body {
   height: 100%;
   margin: 0;
-	background: #2196f3;
+	background-color: #6ec6ff;
 }
 .previoustravelplans {
 margin-left: 10%;
@@ -83,7 +89,7 @@ margin-left: 10%;
 </style>
 </head>
 <body>
-<h2 style="padding: 2%; margin-left: 3%;">Welcome ${loggedUser.getUserfirstname()}</h2>
+<h2 style="padding: 2%; margin-left: 3%;"><strong>Welcome ${loggedUser.getUserfirstname()}</strong></h2>
 <div class="previoustravelplans">
 <% 
  if(session.getAttribute("usertravelplans") != null)

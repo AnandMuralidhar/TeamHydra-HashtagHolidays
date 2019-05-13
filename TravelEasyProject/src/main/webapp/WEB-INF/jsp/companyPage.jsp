@@ -109,11 +109,11 @@ text-decoration:none;
 </style>	
 </head>
 	<body id="bdy">
-	<h2>  Welcome ${companyname}</h2>
+	<h2><strong> Welcome ${companyname}</strong> </h2>
 <div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
 	 <form method="GET" action="/logout" >
 	<p align="right">
-    <input type="submit" class="w3-btn w3-black" value="Logout"></p>
+    <input type="submit" class="w3-btn w3-red" value="Logout"></p>
 	</form>
 	
 	</div>
@@ -159,18 +159,18 @@ text-decoration:none;
 				<div class="tripdata">
 				 <input type="text" name="budget" placeholder="Enter budget" onkeypress="return isNumberKey(event)" required><br />
 				</div>
-				<button type="submit" class="w3-btn">Submit</button>
+				<button type="submit" class="w3-btn w3-blue">Submit</button>
 		</form>		
 	</div>
 	<div class="prediction">
-	<button type="submit" class="w3-btn w3-black"><a target="_blank" href="prediction">Predict</a></button>
+	<button type="submit" class="w3-btn w3-green"><a target="_blank" href="prediction">Predict</a></button>
 	</div>
 	<div class="companytravelplans">
 			 <form method="GET" action="/companytravelplans">
 
 		<input type="hidden" name="companyname" value="${companyname}">
 		<input type="hidden" name="companyusername" value="${companyusername}">
-		<button type="submit" class="w3-btn" >See your plans</button>
+		<button type="submit" class="w3-btn w3-blue" >See your plans</button>
 		</form>
 	 <% 
  if(session.getAttribute("travelplan") != null)
