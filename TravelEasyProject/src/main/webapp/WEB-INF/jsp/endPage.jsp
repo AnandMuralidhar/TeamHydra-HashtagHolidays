@@ -25,8 +25,9 @@ background: #0069c0;
 margin-left: 500px;
 }
 </style>
+
 <body>
 <h1><strong>Thanks for visiting</strong></h1>
-<button class="w3-btn w3-blue"><h2><strong>Back to Hashtag Holiday?</strong></h2></button>
+<button class="w3-btn w3-blue"><a href="/"><h2><strong>Back to Hashtag Holiday?</strong></h2></a></button>
 </body>
 </html>

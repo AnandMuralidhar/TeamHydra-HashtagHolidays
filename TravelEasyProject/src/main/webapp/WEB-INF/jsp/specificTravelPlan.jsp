@@ -208,7 +208,7 @@ function showSocialIcons() {
 </head>
 <body id="bdy">
 	<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
-	<form method="POST" action="/logout" style="float: right; padding-left: 1%;" >
+	<form method="GET" action="/logout" style="float: right; padding-left: 1%;" >
 	<p align="right">
     <input type="submit" class="submitbtn" value="Logout"></p>
 	</form>
@@ -246,9 +246,9 @@ ${message1}
     
 <%-- <button type="submit" id="getreviews" class="getreviews" onClick="getreviews('${SpecificTravelPlan.plan}')" >Reviews</button>
 <div id="displayreviews"></div> --%>
-<div id="displayreviews" style="width: 100%;">
+<!--  <div id="displayreviews" style="width: 100%;">
  <a href="/getReviews?plan=${SpecificTravelPlan.plan}"><h4><strong><font color= "black" style="margin-left: 379px" >Show Reviews</font></strong></h4></a>
-   </div> 
+   </div> -->
      <% 
  if(session.getAttribute("planReview") != null)
  {
@@ -293,7 +293,7 @@ ${message1}
  </ul>
  </li>
  <li>
- <a href="mailto:?subject=Amazing Travel plan&amp;body=Hi,%0D%0A%0D%0AI found this travel plan in #Holidays and thought you might like it. %0D%0A%0D%0A%0D%0A%0D%0ATo read more, login to : http:localhost://3000">
+ <a href="mailto:?subject=Amazing Travel plan&amp;body=Hi,%0D%0A%0D%0AI found this travel plan in #Holidays and thought you might like it. %0D%0A%0D%0A%0D%0A%0D%0ATo read more, login to : http://anandmuralidhara.com">
  <span class="fa fa-envelope"></span>
  </a>
  </li>

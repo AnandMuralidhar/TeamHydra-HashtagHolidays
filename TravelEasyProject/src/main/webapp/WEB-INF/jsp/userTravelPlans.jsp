@@ -52,7 +52,7 @@ div.desc {
 <body id="bdy">
 
 <div class="w3-container" style="margin-top: 20px; margin-right: 50px;">
-	<form method="POST" action="/logout" >
+	<form method="GET" action="/logout" >
 	<p align="right">
     <input type="submit" class="w3-btn w3-black" value="Logout"></p>
 	</form>

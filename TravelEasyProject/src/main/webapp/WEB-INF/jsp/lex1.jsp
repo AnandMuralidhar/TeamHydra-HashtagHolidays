@@ -75,8 +75,8 @@ p.lexError {
 
 <body>
 
-		<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
-	<form method="POST" action="/logout" >
+	<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
+	<form method="GET" action="/logout" >
 	<p align="right">
     <input type="submit" class="w3-btn w3-blue" value="Logout"></p>
 	</form>
@@ -90,7 +90,7 @@ p.lexError {
 		style="width: 400px; margin-left: 550px; height: 400px; border: 1px solid #ccc; background-color: #a9d3d7; padding: 4px; overflow: scroll"></div>
 	<form id="chatform" align="center" style="margin-top: 10px"
 		onsubmit="return pushChat();">
-		<input type="text" id="wisdom" style="margin-right: 10px" value=""
+		<input type="text" id="wisdom" style="margin-left: 4%" value=""
 			 placeholder="I need to see travel plans"> <input
 			type="hidden" id="userID"
 			value="<%=session.getAttribute("DynamoUser") %>">
