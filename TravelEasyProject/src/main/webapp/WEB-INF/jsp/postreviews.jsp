@@ -17,7 +17,8 @@
 	<style>
 	
 	#bdy {
-	background-color: white;
+	font-family: monospace;
+	background-color: #6ec6ff;
     height: 100%; 
 	}
 	.post {
@@ -34,6 +35,12 @@ input[type=text] {
     text-align: center;
     
 }
+h2,h1,h3{
+font-family: monospace;
+color: white;
+text-align: center;
+font-size: 38px;
+}
 label {
   display: inline-block;
   width: 140px;
@@ -47,16 +54,16 @@ label {
  System.out.println(username);
 String plan = request.getParameter("plan"); 
 %>
-<h3>${message}</h3>
+<h3><strong>${message}</strong></h3>
 
 	<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
 	<form method="POST" action="/logout" style="float: right; padding-left: 1%;" >
 	<p align="right">
-    <input type="submit" class="w3-btn w3-black" value="Logout"></p>
+    <input type="submit" class="w3-btn w3-red" value="Logout"></p>
 	</form>
 	<form method="GET" action="/userHomePage" style="float:right;">
 	<p align="right">
-    <input type="submit" class="w3-btn w3-black" value="Back"></p>
+    <input type="submit" class="w3-btn w3-blue" value="Back"></p>
 	</form>
 	</div>
 
@@ -72,9 +79,9 @@ String plan = request.getParameter("plan");
 				</div>
 				<label for="comments">Comments:</label>
 				<div class="post">
-				<input type="text" class="review" name="comments" placeholder="enter comments..." required><br />
+				<input type="text" class="review" name="comments" placeholder="Enter comments" required><br />
    </div>
-   <button type="submit" class="w3-btn w3-black">Post Review</button>
+   <button type="submit" class="w3-btn w3-blue">Post Review</button>
    
   
 </form>

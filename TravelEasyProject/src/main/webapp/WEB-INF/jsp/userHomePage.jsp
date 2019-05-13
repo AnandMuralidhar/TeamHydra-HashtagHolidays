@@ -10,7 +10,7 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="/resources/script.js"></script>
         
-<title>Home Page</title>
+<title>User Home Page</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
@@ -20,14 +20,21 @@
 </script>
 <style>
 
+h2{
+font-family: monospace;
+color: white;
+text-align: center;
+}
 #bdy {
-	background-color: white;
+	font-family: monospace;
+	background-color: #2196f3;
     height: 100%; 
 	}
 
 table {
 	width: 100% !important;	
 }
+
 
 .dashboardtable{
 width: 100% !important;	
@@ -36,8 +43,9 @@ width: 100% !important;
 	text-align: left;
 }
 .dtr {
-	background-color: #dccdc;
+	background-color: #dccdcc;
 }
+
 .lex {
 float: right;
 margin: 5% 10%;
@@ -54,21 +62,19 @@ text-decoration: none;
 }
 
 .submitbtn {
-    padding: 15px 2.0rem;
-  background-color: #4CAF50; 
-    box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
-    border-radius: 500px;
-     color: #fff; 
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 1.2;
-    overflow: hidden;
+   font-family: monospace;
+color: white;
+text-align: center;
+background-color: #0069c0;
+margin-left: 500px;
+  overflow: hidden;
     text-align: center;
     float: right;
 }
 html, body {
   height: 100%;
   margin: 0;
+	background: #2196f3;
 }
 .previoustravelplans {
 margin-left: 10%;
@@ -127,7 +133,7 @@ for(Usertravelplan u : a)
 <div>
 <br /><br /><br />
 <form method="GET"  action="/lex1" style="margin-right: 500px">
-<button type="submit" class="submitbtn">Travel Chat</button> 
+<button type="submit" class="w3-btn w3-blue">Travel Chat</button> 
 </form>
 
 </div>

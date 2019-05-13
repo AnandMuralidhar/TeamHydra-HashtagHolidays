@@ -8,7 +8,8 @@
 String positive = (String)session.getAttribute("positive"); %>
 <style>
 #bdy {
-	background-color: white;
+	font-family: monospace;
+	background-color: #6ec6ff;
     height: 100%; 
 	}
 .predict-container {
@@ -77,7 +78,7 @@ window.onload = function () {
 			<div class="w3-container" style="margin-top: 40px; margin-right: 50px;">
 			<form method="POST" action="/logout" >
 			<p align="right">
-    		<input type="submit" class="w3-btn w3-black" value="Logout"></p>
+    		<input type="submit" class="w3-btn w3-blue" value="Logout"></p>
 			</form>
 			</div>
 <center>
@@ -112,7 +113,7 @@ window.onload = function () {
 				<br />
 				
 				</div>
-				<button type="submit" class="w3-btn w3-black" >Predict</button>
+				<button type="submit" class="w3-btn w3-blue" >Predict</button>
 					
 	</form>
 	</div>

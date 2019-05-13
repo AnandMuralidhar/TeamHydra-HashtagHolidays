@@ -5,8 +5,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
+<title>Reviews</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head><style>
+
+body{
+font-family: monospace;
+background-color: #6ec6ff;
+text-align: center;
+font-size: 38px;
+color: white;
+}
+</style>
 <body>
 <%
    String q = request.getParameter("plan");
@@ -31,7 +42,7 @@ System.out.println(q);
        
 			if (count == 0)
 			{ %>
-				<p style="text-align: center;">No reviews </p>
+				<p style="text-align: center;">No reviews! </p>
 			<% }
        con.close();  
    } catch (Exception e) {
