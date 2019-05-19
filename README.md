@@ -24,6 +24,30 @@ Architecture
 Code Pipeline
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/CICD.jpg)
 
+### Application Screenshots
+
+Okta Sign In:
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/Okta_login.png)
+
+User Dashboard:
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/user_dashboard.png)
+
+Lex chatbot:
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/lex_chat.png)
+
+Travel plans:
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/Plans_list.png)
+
+Social share:
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/social_share.png)
+
+Company Dashboard:
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/Company_dashboard.png)
+
+Machine Learning prediction:
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/Prediction.png)
+
+
 #### AWS Resources:
 
 1.	EC2, AutoScale Group
