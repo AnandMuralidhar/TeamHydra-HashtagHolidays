@@ -59,7 +59,7 @@ Machine Learning prediction:
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/S3Replication.png)
 
 #### Cloud Formation
-![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/CF1.png)
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/CF1.jpg)
 
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/CF2.png)
 
@@ -74,7 +74,7 @@ Machine Learning prediction:
 
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/JenkinsBuildOutput.png)
 
-#### AWS Resources:
+### AWS Resources:
 
 1.	EC2, AutoScale Group
 2.	Elastic Beanstalk
