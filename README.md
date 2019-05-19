@@ -20,6 +20,26 @@ Students:
 ### Demo
 [Demo video Link](https://drive.google.com/file/d/1JEtr1ttb80hXJNsh9uOLkt8gQaM8Uyde/view?usp=sharing)
 
+### Problem Statement
+
+Numerous travelers intend to travel places all around the world all through the year. Arranging your movement is a noteworthy work. When the traveler chooses the place of his interest, he should check separately with each travel website for schedule and the financial plan. This becomes a hectic process. Because of which the he will end up visiting many websites. In the event that more travel plans are accessible under a single platform, it will make it easier for travel agencies to post their plan and get updates.  
+
+### Proposed Solution
+Wouldn't it be less demanding on the off chance that someone arranged your excursion? And all you should do is pack and leave. To get this going the  user and travel organization should enroll with our platform. We are utilizing AWS cloud services for creating and facilitating a 3-Tier Web Application called Travel Easy. It has role based login for organizations and explorers. The travel organizations transfer their agenda subsequent to being a substantial client. The explorers can enlist with the web application to see the sightseeing designs which is coordinated for them by AWS Lex chatbot, taking explorer's necessities to design a plan for the place.
+
+### Features for implementation
+1.	Single Sign-On with role based authentication.
+2.	New user can register himself/herself using Sign up form. This metadata will get stored in RDS for future purposes.
+3.	User will be validated through Login page by verifying username and password from the RDS.
+4.	A role-based login to redirect users based on their roles i.e. Admin, Travelers, Travel Agencies.
+5.	We are implementing Chatbot using Lex to collect user data and provide them best suitable travel plans.
+6.	User Interaction is improved by interacting with Amazon Lex chatbot and Polly.
+7.	Travel Companies can upload images for every plan and these are displayed on users travel plan page. CloudFront caches these images and displays them to user in very less time.
+8.	Serverless Lambda is used to take the input from user and match them with existing travel plans in the database.
+9.	Photos and reviews for the availed plans can be uploaded by the users and are stored in S3 buckets.
+10.	Machine learning is used to analyze traveler’s reviews and suggests travel companies to upload best travel plans that traveler’s would like more. 
+11.	Machine learning is used to analyze the traveler’s data and suggest users the best time to visit the place they are interested in. 
+
 ### Diagrams
 #### Architecture
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/ArchitectureDiagram.png)
@@ -57,7 +77,7 @@ Machine Learning prediction:
 
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/S32.png)
 
-![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/S3LifeCycle.png)
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/S3Lifecycle.png)
 
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/S3Replication.png)
 
