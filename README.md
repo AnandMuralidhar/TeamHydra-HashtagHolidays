@@ -18,10 +18,10 @@ Students:
 [Saylee Vyawahare](https://www.linkedin.com/in/saylee-vyawahare-51b59188/)
 
 ### Diagrams
-Architecture
+#### Architecture
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/ArchitectureDiagram.png)
 
-Code Pipeline
+#### Code Pipeline
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/CICD.jpg)
 
 ### Application Screenshots
@@ -47,6 +47,32 @@ Company Dashboard:
 Machine Learning prediction:
 ![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/Prediction.png)
 
+### AWS Screenshots
+
+#### S3 Configuration, LifeCycle Policy and Replication
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/S31.png)
+
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/S32.png)
+
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/S3LifeCycle.png)
+
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/S3Replication.png)
+
+#### Cloud Formation
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/CF1.png)
+
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/CF2.png)
+
+#### CodePipeline Setup
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/CICD_Stages.png)
+
+#### ElasticBeanstalk Configuration
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/EBSConfiguration.png)
+
+#### Jenkins Build Output
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/JenkinsBuildOutput.png)
+
+![alt text](https://github.com/AnandMuralidhar/TeamHydra-HashtagHolidays/blob/master/TravelEasyProject/images/JenkinsBuildOutput.png)
 
 #### AWS Resources:
 
