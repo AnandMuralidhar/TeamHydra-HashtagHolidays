@@ -24,7 +24,7 @@ color: white;
 System.out.println(q);
    try {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://cloudproject.c7m1brswcf1h.us-east-1.rds.amazonaws.com:3306/cloudproject", "cloudproject", "teamhydra282!");
+        Connection con = DriverManager.getConnection("", "", "");
         Statement smt = con.createStatement(); //Create Statement to interact
         ResultSet r = smt.executeQuery("select * from reviews where(plan='" + q + "');");
         int count = 0;
